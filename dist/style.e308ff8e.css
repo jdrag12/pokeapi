@@ -1,0 +1,59 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.container {
+  position: relative;
+  top: 200px;
+}
+
+#search-bar {
+  width: 95%;
+  height: 100px;
+  padding: 15px;
+  margin: 2.5%;
+  position: fixed;
+  top: 10px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+#search-input {
+  padding: 20px;
+  margin: 0 10%;
+}
+
+#search-input input {
+  width: 90%;
+}
+
+#search-input i {
+  width: 5%;
+}
+
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.pokemon {
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+}
+
+h2.card-title {
+  font-size: 28px;
+  text-align: center;
+}
+
+img.card-image {
+  padding: 1em;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

@@ -852,16 +852,15 @@ var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"))
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log("hola mundo");
-
 function getData() {
-  var url, response, data;
+  var url, response, data, _pokemon, input;
+
   return _regeneratorRuntime.default.async(function getData$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          url = "https://pokeapi.co/api/v2/pokemon/1/";
+          url = "https://pokeapi.co/api/v2/pokemon?limit=150";
           _context.next = 4;
           return _regeneratorRuntime.default.awrap(fetch(url));
 
@@ -872,24 +871,60 @@ function getData() {
 
         case 7:
           data = _context.sent;
-          console.log(data);
-          _context.next = 14;
+          _pokemon = data.results.map(function (data, index) {
+            return {
+              name: data.name,
+              id: index + 1,
+              image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/".concat(index + 1, ".png")
+            };
+          });
+          displayPokemon(_pokemon);
+          input = document.getElementById("form1");
+          input.addEventListener("keyup", function () {
+            var filter = input.value.toUpperCase();
+            var pokedex = document.getElementById("pokedex");
+            var li = pokedex.getElementsByTagName("li");
+
+            for (var i = 0; i < li.length; i++) {
+              var h2 = li[i].getElementsByTagName("h2")[0];
+
+              if (h2) {
+                var txtValue = h2.textContent || h2.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+          });
+          _context.next = 17;
           break;
 
-        case 11:
-          _context.prev = 11;
+        case 14:
+          _context.prev = 14;
           _context.t0 = _context["catch"](0);
           console.error("Error:", _context.t0);
 
-        case 14:
+        case 17:
         case "end":
           return _context.stop();
       }
     }
-  }, null, null, [[0, 11]]);
+  }, null, null, [[0, 14]]);
 }
 
+var displayPokemon = function displayPokemon(pokemon) {
+  var pokemonHTMLString = pokemon.map(function (pokeman) {
+    return "<li class=\"p-3 \">\n    <div class=\"card  pokemon\">\n        <img class=\"card-image\" src=\"".concat(pokeman.image, "\"/>\n        <h2 class=\"card-title\">").concat(pokeman.id, ". ").concat(pokeman.name, "</h2>\n        </a>\n    </div></li>\n        ");
+  }).join("");
+  pokedex.innerHTML = pokemonHTMLString;
+};
+
 getData();
+var pokemon = document.getElementsByClassName("pokemon");
+console.log(pokemon[0]);
 },{"regenerator-runtime":"node_modules/regenerator-runtime/runtime.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -918,7 +953,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53256" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61730" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
