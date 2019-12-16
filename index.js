@@ -53,5 +53,3 @@ const displayPokemon = pokemon => {
 getData();
 
 var pokemon = document.getElementsByClassName("pokemon");
-
-console.log(pokemon[0]);

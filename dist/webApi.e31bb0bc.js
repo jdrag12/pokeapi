@@ -924,7 +924,6 @@ var displayPokemon = function displayPokemon(pokemon) {
 
 getData();
 var pokemon = document.getElementsByClassName("pokemon");
-console.log(pokemon[0]);
 },{"regenerator-runtime":"node_modules/regenerator-runtime/runtime.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -953,7 +952,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61730" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51164" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
