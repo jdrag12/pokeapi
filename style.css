@@ -33,14 +33,15 @@ body {
 
 #pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   justify-items: center;
 }
 
 .pokemon {
   z-index: 0;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
 }
 
 h2.card-title {
@@ -65,9 +66,5 @@ li {
   #search-input i {
   display:none;
 }
-  .pokemon {
-  z-index: 0;
-  width: 100%;
-  height: auto;
-}
+
 }
