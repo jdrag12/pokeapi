@@ -33,13 +33,13 @@ body {
 
 #pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .pokemon {
   z-index: 0;
   width: 100%;
-  height: 300px;
+  height: auto;
 }
 
 h2.card-title {
@@ -48,7 +48,7 @@ h2.card-title {
 }
 
 img.card-image {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 li {
