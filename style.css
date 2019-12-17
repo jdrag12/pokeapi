@@ -33,23 +33,24 @@ body {
 
 #pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-columns: repeat(auto-fit, 1fr);
   justify-items: center;
 }
 
 .pokemon {
   z-index: 0;
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
 }
 
 h2.card-title {
   font-size: 28px;
   text-align: center;
+  padding:1em;
 }
 
 img.card-image {
-  padding: 1em 2em;
+  padding: 1em;
 }
 
 li {
@@ -63,5 +64,10 @@ li {
 }
   #search-input i {
   display:none;
+}
+  .pokemon {
+  z-index: 0;
+  width: 100%;
+  height: auto;
 }
 }
