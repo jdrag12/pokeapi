@@ -60,4 +60,7 @@ li {
   padding: 5px;
   margin: 0 10%;
 }
+  #search-input input {
+  width: 80%;
+}
 }
