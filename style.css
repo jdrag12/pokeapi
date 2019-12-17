@@ -33,7 +33,7 @@ body {
 
 #pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, 200px);
 }
 
 .pokemon {
@@ -61,6 +61,6 @@ li {
   margin: 0 10%;
 }
   #search-input input {
-  width: 80%;
+  display:none;
 }
 }
