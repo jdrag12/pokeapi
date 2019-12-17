@@ -54,3 +54,10 @@ img.card-image {
 li {
   list-style-type: none;
 }
+
+@media (max-width:600px){
+  #search-input {
+  padding: 5px;
+  margin: 0 10%;
+}
+}
